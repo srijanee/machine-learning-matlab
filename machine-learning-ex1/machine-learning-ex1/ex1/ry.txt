@@ -1,0 +1,26 @@
+alpha1 = 0.3;
+num_iters = 400;
+theta1 = zeros(3, 1);
+[theta1, J1] = gradientDescentMulti(X, y, theta1, alpha1, num_iters);
+
+
+alpha2 = 0.5;
+num_iters = 400;
+theta2 = zeros(3, 1);
+[theta2, J2] = gradientDescentMulti(X, y, theta2, alpha2, num_iters);
+
+alpha3 = 0.01;
+num_iters = 400;
+theta3 = zeros(3, 1);
+[theta3, J3] = gradientDescentMulti(X, y, theta3, alpha3, num_iters);
+
+hold on;
+plot(1:50, J1(1:50), ‘b’); 
+hold on; 
+plot(1:50, J2(1:50), ‘r’);
+plot(1:50, J3(1:50), ‘k’);
+
+
+ 334302.063993 
+ 100087.116006 
+ 3673.548451
